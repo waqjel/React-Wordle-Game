@@ -1,0 +1,216 @@
+/* public/style.css */
+
+:root {
+    --color-correct: #6aaa64;
+    --color-misplaced: #c9b458;
+    --color-incorrect: #b83d3d;
+    --color-border: #d3d6da;
+    --color-text: #1a1a1b;
+    --tile-size: 60px;
+    --color-bg: #ffffff;
+}
+
+body {
+    font-family: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    min-height: 100vh;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-border);
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0;
+}
+
+/* Settings Panel */
+.settings-panel {
+    background: #f8f9fa;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    text-align: left;
+    border: 1px solid var(--color-border);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.setting-item {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+/* The Grid System */
+.board {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    border: 2px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: white;
+    transition: all 0.2s ease;
+}
+
+/* Status Classes */
+.tile.correct {
+    background-color: var(--color-correct);
+    color: white;
+    border-color: var(--color-correct);
+}
+
+.tile.misplaced {
+    background-color: var(--color-misplaced);
+    color: white;
+    border-color: var(--color-misplaced);
+}
+
+.tile.incorrect {
+    background-color: var(--color-incorrect);
+    color: white;
+    border-color: var(--color-incorrect);
+}
+
+/* Input & Buttons */
+.input-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+button {
+    background-color: #0786b8;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.start-btn {
+    background-color: var(--color-correct);
+    
+    margin: 10px auto;
+}
+
+.start-btn a{
+    color: white;
+    text-decoration: none;
+}
+
+.win-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Highscore Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+}
+
+th {
+    background-color: #f8f9fa;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #787c7e;
+    font-weight: 700;
+}
+
+tr:hover {
+    background-color: #fcfcfc;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    margin-top: 40px;
+    padding: 20px;
+    color: #787c7e;
+    text-align: center;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+}
+
+.footer-nav a, .footer-nav button {
+    color: #1a1a1b;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+hr {
+    width: 100%;
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 20px 0;
+}
