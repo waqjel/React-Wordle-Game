@@ -1,9 +1,9 @@
 # Wordle-Spelet
 ------------------------------------------------------
 ## Kommandon för att installera, köra och testa spelet
-1. npm install
-2. npm run
-3. npm test
+1. **npm install**
+2. **npm start**
+3. **npm test**
 ------------------------------------------------------
 * Spelet ska utvecklas fullstack, med GUI utvecklat i React, och delar av spellogiken på backend via ett API.
 * Spelets regler definieras av de algoritmer som beskrevs i kursens första uppgift.
